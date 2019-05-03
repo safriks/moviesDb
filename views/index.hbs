@@ -1,0 +1,10 @@
+<form action="/" method="get">
+    <input type="text" name="search">
+    <button type="submit">search for (?)!</button>
+</form>
+
+{{#each movies}}
+    {{> movie }}
+{{/each}}
+
+<p>after the "movies"</p>

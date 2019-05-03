@@ -1,0 +1,20 @@
+<h1> {{movies.title}}</h1>
+<span> {{movies.year}}</span>
+<span> {{movies.director}}</span>
+<span> {{movies.duration}}</span>
+{{#each movies.genre}}
+    {{this}}
+{{/each}}
+<hr>
+<form action="movie" method="post">
+    <input type="hidden" name="_id" placeholder="{{movies._id}}" value="{{movies._id}}">
+    <input type="text" name="title" placeholder="{{movies.title}}" value="{{movies.title}}">
+    <input type="text" name="director" placeholder="{{movies.director}}" value="{{movies.director}}">
+    <input type="text" name="year" placeholder="{{movies.year}}" value="{{movies.year}}">
+    <button type="submit">update info</button>
+</form>
+<hr>
+<a href="/delete?id={{movies._id}}">
+    <button>delete this document</button>
+
+</a>
