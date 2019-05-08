@@ -2,3 +2,10 @@
 <span> {{year}}</span>
 <span> {{_id}}</span>
 <a href="/detail?id={{_id}}">detailed view</a>
+<span>
+    Cast:
+    {{#each cast}}
+        <span>{{first_name}} {{last_name}}; </span>
+    {{/each}}
+</span>
+

@@ -5,7 +5,9 @@ const movieSchema = new mongoose.Schema({
     year: { type: String },
     director: {type: String },
     duration: {type: String},
-    genre: {type: Array}
+    genre: {type: Array},
+    cast: [{type: mongoose.Schema.Types.ObjectId, ref:"celebrities"}]
+
   })
 
 const Movie = mongoose.model('movies', movieSchema);
